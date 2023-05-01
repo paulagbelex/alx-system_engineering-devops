@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Display only lines that shows bash
+ps -aux | grep bash
