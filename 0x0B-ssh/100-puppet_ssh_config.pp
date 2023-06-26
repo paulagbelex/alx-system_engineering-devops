@@ -3,11 +3,11 @@
 
 
 file_line { 'Turn off passwd auth':
- 12   ensure => present,
- 13   path   => '/etc/ssh/ssh_config',
- 14   line   => '    PasswordAuthentication no',
- 15   replace => true,
- 16 }
+  ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  line   => '    PasswordAuthentication no',
+  replace => true,
+}
 
 file_line { "identity file":
   ensure => present,
