@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #Puppet to make changes to our configuration file.
 
-
 file_line { 'Turn off passwd auth':
   ensure => present,
   path   => '/etc/ssh/ssh_config',
@@ -9,9 +8,13 @@ file_line { 'Turn off passwd auth':
   replace => true,
 }
 
-file_line { "identity file":
+#file linw puppet file
+file_line { 'Delare identity file':
   ensure => present,
   path   => '/etc/ssh/ssh_config',
-  line   => '     Identity File ~/.ssh/school',
+  line   => '     IdentityFile ~/.ssh/school',
   replace => true,
 }
+
+
+#attributed an Ubuntu server, living in a datacenter far far away
