@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#task 1 install server
+#Nginx should be listening on port 80
+#When querying Nginx at its root / with a GET request (requesting a page) using curl, 
+
+sudo apt-get -y update
+
+#write a Bash script that configures a new Ubuntu
+
+sudo apt-get -y install nginx
+
+echo "Hello, World" 
