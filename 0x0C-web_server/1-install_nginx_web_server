@@ -10,3 +10,6 @@ sudo apt-get -y update
 sudo apt-get -y install nginx
 
 echo "Hello, World" 
+
+sudo service nginx start
+# start niginx service
