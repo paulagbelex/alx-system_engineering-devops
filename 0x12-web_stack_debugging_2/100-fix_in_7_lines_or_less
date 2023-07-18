@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 useradd -r nginx
 sed -i 's/user\s*nginx;/user nginx nginx;/' /etc/nginx/nginx.conf
