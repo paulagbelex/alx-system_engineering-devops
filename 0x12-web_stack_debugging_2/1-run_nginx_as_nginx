@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Step 1: Create the nginx user if it doesn't exist
+id -u nginx &>/dev/null || useradd -r nginx
+
+# Step 2: Adjust Nginx configuration
+sed -i 's/user\s*nginx;/user nginx nginx;/' /etc/nginx/nginx.conf
+
+# Step 3: Restart Nginx to apply changes
+service nginx restart
+
+# Step 4: Check if Nginx is running as nginx user
+ps auxff | grep "[n]ginx"
+nc -z 0 8080
